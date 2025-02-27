@@ -168,7 +168,7 @@ function changeLanguage(lang) {
     
     // Kapcsolat szekció
     document.querySelector('.contact h2').textContent = t.contact.title;
-    document.querySelector('.contact__info p').innerHTML = t.contact.content + ' <a href="https://discord.com/users/662200412446654465" class="link">Discord.</a>';
+    document.querySelector('.contact__info p').innerHTML = t.contact.content;
     
     // Lábléc
     document.querySelector('.footer p').innerHTML = `&copy; 2025 - ${t.footer.rights} <a href="https://discord.com/users/662200412446654465" class="link">matezper2</a>.`;
