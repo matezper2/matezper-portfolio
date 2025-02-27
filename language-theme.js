@@ -85,7 +85,7 @@ const translations = {
         },
         about: {
             title: 'About Me',
-            content: 'Hello, I\'m matezper2, a 15-year-old from Hungary. I\'m more of an introvert, but I\'ve been passionate about modding games since I was 8. My journey started with Minecraft mods, and over time, I expanded to designing roleplay servers for Grand Theft Auto 5. By late 2023, I discovered the world of Discord development and have been diving deeper into it ever since. Along the way, I\'ve met some incredible people on Discord. Oh, and did I mention? I\'m a developer—well, somewhat. I create Discord bots using JavaScript and build websites for anyone who needs them, working with HTML, CSS, JavaScript, and TypeScript.',
+            content: 'Hello, I\'m matezper2, a 16-year-old from Hungary. I\'m more of an introvert, but I\'ve been passionate about modding games since I was 8. My journey started with Minecraft mods, and over time, I expanded to designing roleplay servers for Grand Theft Auto 5. By late 2023, I discovered the world of Discord development and have been diving deeper into it ever since. Along the way, I\'ve met some incredible people on Discord. Oh, and did I mention? I\'m a developer—well, somewhat. I create Discord bots using JavaScript and build websites for anyone who needs them, working with HTML, CSS, JavaScript, and TypeScript.',
 
         },
         contact: {
