@@ -1,9 +1,7 @@
 
-// Nyelvválasztó funkcionalitás
 const langHu = document.getElementById('lang-hu');
 const langEn = document.getElementById('lang-en');
 
-// Az oldal szövegei magyarul és angolul
 const translations = {
     hu: {
         nav: {
@@ -98,7 +96,6 @@ const translations = {
     }
 };
 
-// Ellenőrizzük, hogy van-e már mentett nyelv beállítás
 const savedLanguage = localStorage.getItem('language') || 'en';
 if (savedLanguage === 'hu') {
     changeLanguage('hu');
@@ -110,7 +107,6 @@ if (savedLanguage === 'hu') {
     langHu.classList.remove('active');
 }
 
-// Nyelvválasztó gombok eseménykezelői
 langHu.addEventListener('click', () => {
     changeLanguage('hu');
     langHu.classList.add('active');
@@ -125,11 +121,10 @@ langEn.addEventListener('click', () => {
     localStorage.setItem('language', 'en');
 });
 
-// Nyelvváltó függvény
 function changeLanguage(lang) {
     const t = translations[lang];
     
-    // Navigáció
+
     document.querySelectorAll('.nav__link').forEach((link, index) => {
         if (index === 0) link.textContent = t.nav.work;
         if (index === 1) link.textContent = t.nav.clients;
@@ -137,15 +132,13 @@ function changeLanguage(lang) {
         if (index === 3) link.textContent = t.nav.contact;
     });
     
-    // Fejléc
+
     document.querySelector('.header__text p').textContent = t.header.tagline;
     document.querySelector('.tech-stack p').textContent = t.header.techStack;
     document.querySelector('.header__text .btn').textContent = t.header.getInTouch;
     
-    // Munkák szekció
     document.querySelector('.work h2').textContent = t.work.title;
-    
-    // Projektek
+
     const workBoxes = document.querySelectorAll('.work__box');
     workBoxes[0].querySelector('h3').textContent = t.work.project1.title;
     workBoxes[0].querySelector('p').textContent = t.work.project1.desc;
@@ -159,17 +152,17 @@ function changeLanguage(lang) {
     workBoxes[2].querySelector('p').textContent = t.work.project3.desc;
     workBoxes[2].querySelector('.link__text').textContent = t.work.project3.visitSite + ' ';
     
-    // Ügyfelek szekció
+
     document.querySelector('.client h2').textContent = t.clients.title;
     
-    // Rólam szekció
+
     document.querySelector('.about h2').textContent = t.about.title;
     document.querySelector('.about__text p').textContent = t.about.content;
     
-    // Kapcsolat szekció
+
     document.querySelector('.contact h2').textContent = t.contact.title;
     document.querySelector('.contact__info p').innerHTML = t.contact.content;
     
-    // Lábléc
+
     document.querySelector('.footer p').innerHTML = `&copy; 2025 - ${t.footer.rights} <a href="https://discord.com/users/662200412446654465" class="link">matezper2</a>.`;
 }
