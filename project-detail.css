@@ -1,0 +1,173 @@
+/* Project detail page specific styles */
+
+.project-header {
+  height: 70vh;
+}
+
+.project-title {
+  font-size: 5rem;
+}
+
+.project-tagline {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.project-detail {
+  padding: var(--gutter-huge) 0;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.project-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-images {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-images img {
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.image-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+}
+
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: all 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: var(--pink);
+}
+
+.project-info {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-info h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.project-info h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 8rem;
+  background: var(--pink);
+  margin: 1rem 0;
+}
+
+.project-description p {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.technologies-list, .features-list {
+  list-style-position: inside;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.technologies-list li, .features-list li {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.categories-list {
+  list-style-position: inside;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.categories-list li {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.military-uniform-list {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+
+.project-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media(max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+  }
+  
+  .project-gallery, .project-info {
+    width: 100%;
+  }
+  
+  .prev-btn, .next-btn {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.8rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media(max-width: 480px) {
+  .project-title {
+    font-size: 3.5rem;
+  }
+  
+  .project-tagline {
+    font-size: 1.8rem;
+  }
+  
+  .prev-btn, .next-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
+  }
+}
